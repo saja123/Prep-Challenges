@@ -27,13 +27,18 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
+  let infocus
+  let name = "name";
+  let age = "age";
+  for(let i = 0; i<arr.length; i++){
+  
   return Object.entries(obj).map(([name, age]) => `Customer Name :${name} , Age :${age}`); //to return order pair from name and age
-    
+  }
   
   console.log(customerAndAge(obj));
-  }
-
   
+}
+  return obj;
   // write your code here
 
 // -------------------------------------------------------------------------------------------------------
@@ -152,3 +157,4 @@ module.exports = {
   getInfo,
   getStudents,
 };
+
