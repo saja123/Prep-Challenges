@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                " function compareTriplets(a, b) {\n    let aliceScore = 0;\n     let bobScore = 0;\n    \nfor (let i = 0; i < 3; i++) {\n         if (a[i] > b[i]) {\n             aliceScore++;\n        } else if (a[i] < b[i]) {\n             bobScore++;\n         }\n     }\n    \n    console.log(aliceScore, bobScore);\n }"
+                "function birthdayCakeCandles(candles) {\n    // Write your code here\n  let maxHeight = 0;\n  let tallestCount = 0;\n\n  for (let i = 0; i < candles.length-1; i++) {\n    const currentHeight = candles[i];\n\n    if (currentHeight >= maxHeight) {\n      maxHeight = currentHeight;\n      tallestCount++;\n    }\n  }\n\n  return tallestCount;\n}"
             ],
             "outputs": []
         },
