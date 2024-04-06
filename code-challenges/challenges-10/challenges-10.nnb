@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                " \n\n const n = parseInt();\nlet maxNum = -Infinity;\nlet count = 0;\n\nfor (let i = 0; i < n; i++) {\n    const input = parseInt();\n    if (!isNaN(input)) {\n        if (input > maxNum) {\n            maxNum = input;\n            count = 1;  // Reset count to 1 if a new maximum is found\n        } else if (input === maxNum) {\n            count++;  // Increment count if the input is equal to the current maximum\n        }\n    }\n}\n\nconsole.log(count);  // Print the count of occurrences of the maximum number"
+                ""
             ],
             "outputs": [
                 {
@@ -71,7 +71,7 @@
         {
             "language": "javascript",
             "source": [
-                "// third \nlet n = parseInt();\nlet arr = [];\nlet mx = 0;\n\nfor (let i = 0; i < n; i++) {\n    \n    let input = parseInt();\n    arr.push(input);\n\n    mx = Math.max(mx, input);\n}\nlet counter = 0;\nfor (let i = 0; i < n; i++) {\n    if (arr[i] === mx) {\n        counter++;\n    }\n}\n\nconsole.log(counter);"
+                ""
             ],
             "outputs": [
                 {
