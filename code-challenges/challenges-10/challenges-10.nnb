@@ -17,14 +17,14 @@
         {
             "language": "markdown",
             "source": [
-                "#####  [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:"
+                ""
             ],
             "outputs": []
         },
         {
-            "language": "javascript",
+            "language": "markdown",
             "source": [
-                ""
+                "function compareTriplets(a, b) {\n     let aliceScore = 0;\n     let bobScore = 0;\n    \n     for (let i = 0; i < 3; i++) {\n         if (a[i] > b[i]) {\n            aliceScore++;\n         } else if (a[i] < b[i]) {\n             bobScore++;\n         }\n     }\n    \n    console.log(aliceScore, bobScore);\n }"
             ],
             "outputs": []
         },
@@ -45,9 +45,21 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                " function compareTriplets(a, b) { // the fist one \n     let aliceScore = 0;\n     let bobScore = 0;\n    \n     for (let i = 0; i < 3; i++) {\n         if (a[i] > b[i]) {\n            aliceScore++;\n         } else if (a[i] < b[i]) {\n             bobScore++;\n         }\n     }\n    \n    console.log(aliceScore, bobScore);\n }\n\n // the second \n\n const n = parseInt();\nlet maxNum = -Infinity;\nlet count = 0;\n\nfor (let i = 0; i < n; i++) {\n    const input = parseInt();\n    if (!isNaN(input)) {\n        if (input > maxNum) {\n            maxNum = input;\n            count = 1;  // Reset count to 1 if a new maximum is found\n        } else if (input === maxNum) {\n            count++;  // Increment count if the input is equal to the current maximum\n        }\n    }\n}\n\nconsole.log(count);  // Print the count of occurrences of the maximum number"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "0",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
@@ -59,9 +71,21 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "// third \nlet n = parseInt();\nlet arr = [];\nlet mx = 0;\n\nfor (let i = 0; i < n; i++) {\n    \n    let input = parseInt();\n    arr.push(input);\n\n    mx = Math.max(mx, input);\n}\nlet counter = 0;\nfor (let i = 0; i < n; i++) {\n    if (arr[i] === mx) {\n        counter++;\n    }\n}\n\nconsole.log(counter);"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "0",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
