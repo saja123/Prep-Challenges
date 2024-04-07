@@ -27,6 +27,7 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
+<<<<<<< HEAD
   for (let key in obj) {
     arr.push(`Customer Name :${key} , Age :${obj[key]}`)
   }
@@ -35,6 +36,15 @@ const customerAndAge = (obj) => {
   
   // write your code here
 
+=======
+  // write your code here
+  let result = []
+  for (let key in obj) {
+    result.push(`Customer Name :${key} , Age :${obj[key]}`)
+  }
+  return result;
+};
+>>>>>>> main
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -60,7 +70,11 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   // write your code here
+<<<<<<< HEAD
   return obj.entries(recipeInfo).map(([key, value]) => {
+=======
+  return Object.entries(obj).map(([key, value]) => {
+>>>>>>> main
     if (key === "ingredients") {
       // Join ingredients array into a single string
       value = value.join(",");
@@ -143,4 +157,7 @@ module.exports = {
   getInfo,
   getStudents,
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
