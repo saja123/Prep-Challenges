@@ -27,16 +27,13 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
+  // write your code here
   let result = []
-  for (const [name, age] of Object.entries(obj)) {
-    result.push(`Customer Name :${name} , Age :${age}`);
+  for (let key in obj) {
+    result.push(`Customer Name :${key} , Age :${obj[key]}`)
   }
-
   return result;
 };
-  
-  // write your code here
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -61,19 +58,14 @@ const customerAndAge = (obj) => {
 // You can solve this challenge by using Object.entries
 
 const getEntries = (obj) => {
- // return Object.entries(obj).map(([name, ingredients, cookTime, price ]) => `name :${name} , ingredients :${ ingredients} , cookTime :${cookTime} ,${okTime} `);
   // write your code here
-  const pizzaArr = [];
-
-  for (const [key, value] of Object.entries(obj)) {
-    if (Array.isArray(value)) {
-      const joinedValue = value.join(',');
-      pizzaArr.push(`${key}: ${joinedValue}`);
-    } else {
-      pizzaArr.push(`${key}: ${value}`);
+  return Object.entries(obj).map(([key, value]) => {
+    if (key === "ingredients") {
+      // Join ingredients array into a single string
+      value = value.join(",");
     }
-  }
-  return pizzaArr;
+    return `${key}: ${value}`;
+  });
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -150,4 +142,3 @@ module.exports = {
   getInfo,
   getStudents,
 };
-
