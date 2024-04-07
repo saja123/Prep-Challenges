@@ -27,18 +27,12 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-  let infocus
-  let name = "name";
-  let age = "age";
-  for(let i = 0; i<arr.length; i++){
-  
-  return Object.entries(obj).map(([name, age]) => `Customer Name :${name} , Age :${age}`); //to return order pair from name and age
+  for (let key in obj) {
+    arr.push(`Customer Name :${key} , Age :${obj[key]}`)
   }
-  
-  console.log(customerAndAge(obj));
-  
+  return arr;
 }
-  return obj;
+  
   // write your code here
 
 // -------------------------------------------------------------------------------------------------------
@@ -65,22 +59,14 @@ const customerAndAge = (obj) => {
 // You can solve this challenge by using Object.entries
 
 const getEntries = (obj) => {
- // return Object.entries(obj).map(([name, ingredients, cookTime, price ]) => `name :${name} , ingredients :${ ingredients} , cookTime :${cookTime} ,${okTime} `);
   // write your code here
-  return Object.entries(obj).map(([key, value]) => { //to test all array and return
-    if (Array.isArray(value)) {
-      value = value.join(',');
+  return obj.entries(recipeInfo).map(([key, value]) => {
+    if (key === "ingredients") {
+      // Join ingredients array into a single string
+      value = value.join(",");
     }
     return `${key}: ${value}`;
   });
-  let infoPizza = {
-    name: "name",
-    ingredients: ["", "", "", ""],
-    cookTime: "cookTime",
-    price: "price",
-  };
-  
-  console.log(getEntries(infoPizza));
 };
 // -------------------------------------------------------------------------------------------------------
 
