@@ -27,13 +27,15 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-  // write your code here
-  let result = []
+  let result  = []
   for (let key in obj) {
     result.push(`Customer Name :${key} , Age :${obj[key]}`)
   }
   return result;
-};
+}
+  
+  // write your code here
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------

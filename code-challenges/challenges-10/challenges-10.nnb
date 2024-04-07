@@ -24,14 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "\n function calcandle(h, l) {\n     let aliScore = 0;\n    let bobScore = 0;\n    \n     for (let i = 0; i < 3; i++) {\n         if (a[i] > b[i]) {\n             aliScore++;\n        } else if (a[i] < b[i]) {\n             bobScore++;\n         }\n     }\n    \n     console.log(aliScore, bobScore);\n }\n\n"
-            ],
-            "outputs": []
-        },
-        {
-            "language": "javascript",
-            "source": [
-                ""
+                "function birthdayCakeCandles(candles) {\n    // Write your code here\n    const maximum = candles.reduce((max, candle) => Math.max(max, candle), 0);\n    const count = candles.filter(candle => candle === maximum).length;\n    return count;\n}"
             ],
             "outputs": []
         },
@@ -52,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                "function compareTriplets(a, b) {\n    let saja = 0;\n    let yara = 0;\n    \n    for (let i = 0; i < 3; i++) {\n        if (a[i] > b[i]) {\n            saja++;\n        } else if (a[i] < b[i]) {\n            yara++;\n        }\n    }\n    \n   console.log(saja, yara);\n}\n//to put attribute from user//\n// Get input from the user using prompt // 2 ,3, 4\n//const aInput = prompt(\"Enter Alice's ratings (space-separated):\").split(\" \").map(Number);\n//const bInput = prompt(\"Enter Bob's ratings (space-separated):\").split(\" \").map(Number);\n\n// Convert input strings to arrays of numbers and calculate scores\n//const result = compareTriplets(aInput, bInput);\n\n// Output the result\n//document.write(result);"
+                ""
             ],
             "outputs": []
         },
@@ -66,7 +59,7 @@
         {
             "language": "javascript",
             "source": [
-                "const n = parseInt();\nlet maxNum = -Infinity;\nlet count = 0;\n\nfor (let i = 0; i < n; i++) {\n    const input = parseInt();\n    if (!isNaN(input)) {\n        if (input > maxNum) {\n            maxNum = input;\n            count = 1;  // Reset count to 1 if a new maximum is found\n        } else if (input === maxNum) {\n            count++;  // Increment count if the input is equal to the current maximum\n        }\n    }\n    console.log(maxNum, count);\n}\n\n\n"
+                ""
             ],
             "outputs": []
         }
