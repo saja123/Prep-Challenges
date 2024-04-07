@@ -27,11 +27,11 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-  
+  let result  = []
   for (let key in obj) {
-    arr.push(`Customer Name :${key} , Age :${obj[key]}`)
+    result.push(`Customer Name :${key} , Age :${obj[key]}`)
   }
-  return arr;
+  return result;
 }
   
   // write your code here
@@ -144,7 +144,3 @@ module.exports = {
   getInfo,
   getStudents,
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> main
