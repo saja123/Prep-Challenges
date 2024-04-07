@@ -59,7 +59,7 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   // write your code here
-  return Object.entries(recipeInfo).map(([key, value]) => {
+  return Object.entries(obj).map(([key, value]) => {
     if (key === "ingredients") {
       // Join ingredients array into a single string
       value = value.join(",");
