@@ -17,13 +17,13 @@
 // 
 
 function square(arr) {
-    
+  
         return arr.map(function(x) {
           return x * x;
         });
-      }
+     }
       
-      console.log(square([2, 8, 3, 5])); 
+     console.log(square([2, 8, 3, 5])); 
       
 
      
@@ -164,35 +164,22 @@ function fullName(arr) {
 //]
 // -------------
 
-function gradesAvg(arr) {
-    return arr.map(function(avg){
-        return `${students.avg}`;
-    })
-    var students = [
-        	{
-         			firstName: 'Adam',
-              lastName: 'Anderson',
-         			gradsList: [20, 50, 13, 11, 2, 45, 60, 29]
-        },
-         {
-         			firstName: 'Ben',
-              lastName: 'Zeller',
-         			gradsList: [20, 10, 11, 11, 2, 5, 3, 2]
-         },
-         {
-         			firstName: 'Peter',
-              lastName: 'Mccord',
-         	    gradsList: [62, 50, 80, 90, 39, 45, 60, 50]
-         },
-        {
-         			firstName: 'Fred',
-             lastName: 'Sagar',
-         			gradsList: [20, 10, 18, 11, 2, 20, 3, 10]
-         }
-         ]
-    
+function gradesAvg(arr){
+
+    let stuavg = arr.map(student => {
+      let sum = 0;
+      student.gradsList.forEach((grade)=> {
+        sum += grade;
+      })
+  student.avg = sum / student.gradsList.length;
+      return student;
+    });
+
+  return stuavg;
     // write your code here
 }
+    console.log(gradesAvg(students1));
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -270,3 +257,9 @@ function studentsResult(arr) {
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
+
+
+
+
+
+ 
