@@ -17,21 +17,11 @@
 // 
 
 function square(arr) {
-  
-        return arr.map(function(x) {
-          return x * x;
-        });
-     }
-      
-     console.log(square([2, 8, 3, 5])); 
-      
+  return arr.map(function (x) {
+    return x * x;
+  });
+}
 
-     
-
-    // write your code here
-
-   
-// -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02:
@@ -67,38 +57,11 @@ function square(arr) {
 //
 // Output: ['Adam Anderson', 'Ben Zeller', 'Peter Mccord', 'Fred Sagar', 'Nathan Weiss']
 
+
 function fullName(arr) {
-    
-        return arr.map(function(student) {
-          return `${student.firstName} ${student.lastName}`;
-        });
-      
-      const students = [
-        {
-          firstName: 'Adam',
-          lastName: 'Anderson',
-        },
-        {
-          firstName: 'Ben',
-          lastName: 'Zeller',
-        }, 
-        {
-          firstName: 'Peter',
-          lastName: 'Mccord',
-        },
-        {
-          firstName: 'Fred',
-          lastName: 'Sagar',
-        },
-        {
-          firstName: 'Nathan',
-          lastName: 'Weiss',
-        }
-      ];
-      
-      console.log(fullName(students));
-      
-    // write your code here
+  return arr.map(function (student) {
+    return `${student.firstName} ${student.lastName}`;
+  }); 
 }
 
 // -------------------------------------------------------------------------------------------------------
@@ -164,21 +127,18 @@ function fullName(arr) {
 //]
 // -------------
 
-function gradesAvg(arr){
-
-    let stuavg = arr.map(student => {
-      let sum = 0;
-      student.gradsList.forEach((grade)=> {
-        sum += grade;
-      })
-  student.avg = sum / student.gradsList.length;
-      return student;
-    });
-
+function gradesAvg(arr) {
+  let stuavg = arr.map(student => {
+    let sum = 0;
+    student.gradsList.forEach((grade) => {
+      sum += grade;
+    })
+    student.avg = sum / student.gradsList.length;
+    return student;
+  });
   return stuavg;
-    // write your code here
 }
-    console.log(gradesAvg(students1));
+
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -252,7 +212,7 @@ function gradesAvg(arr){
 // ]
 
 function studentsResult(arr) {
-    // write your code here
+  // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -262,4 +222,4 @@ module.exports = { square, fullName, gradesAvg, studentsResult };
 
 
 
- 
+
