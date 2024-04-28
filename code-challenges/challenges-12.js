@@ -18,7 +18,7 @@ const { fullName } = require("./challenges-11");
 // [20, 54, 89, 41, 2, 31, 111, 15, 0, 31, 200] 
 // Output:
 // [89, 41, 31, 111, 31]
-// 
+// bhkj
 
 const oddFiltration = (arr) => {
     
