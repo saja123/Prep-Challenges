@@ -80,45 +80,35 @@ console.log(intaraay2);
 //  2- If one of the names is null dont add it to the full name
 
 const cvsFiltration = (arr) => {
-    const output = arr.filter(candidates =>{
-        if(candidates.yearsOfExperience > 4 && candidates.tech == js){
-        let fullName = "";
-        if(candidates.firstName && candidates.LastName){
-            return fullName += "candidates.firstName" + "candidates.LastName"
-        }
-        else{
-            return false
-        }
-        }
-        var cvs = [
-                 {
-                     firstName: "Jason",
-                     LastName: "James",
-                     yearsOfExperience: 20,
-                     tech: "JS"
-                },
-                 {
-                     firstName: "Shira",
-                     LastName: null,
-                    yearsOfExperience: 5,
-                   tech: ".Net"
-                },
-                 {
-                    firstName: "Dmitri",
-                    LastName: "Akkerman",
-                     yearsOfExperience: 1,
-                     tech: "Python"
-                 },
-                 {
-                     firstName: "Isabella",
-                     LastName: null,
-                     yearsOfExperience: 4,
-                     tech: "Java"
-                 }
-             ]
+    return arr
+    .filter(candidates =>candidates.tech === "JS" && candidates.yearsOfExperience > 4)
+    .map(candidates =>{
+        let fullName = candidates.firstName ;
+       if(candidates.LastName){
+           fullName += " " + candidates.LastName
+       }
+      return {
+       fullName : fullName,
+       tech : candidates.tech
+    
+    
+   }
 
     })
-    console.log(cvsFiltration(cvs));
+    //const output = arr.filter(candidates =>{
+       // candidates.yearsOfExperience > 4 && candidates.tech === "JS"
+      //  let fullName = candidates.firstName ;
+      //  if(candidates.LastName){
+           // fullName += " " + candidates.LastName
+     //   }
+      // return {
+      //  fullName : fullName,
+       // tech : candidates.tech
+    
+        //}
+  //  }
+    //)
+    
    
 }
     // write your code here
@@ -135,14 +125,10 @@ const cvsFiltration = (arr) => {
 // 
 
 const vowelsFiltration = (arr) => {
-    const vowelsFiltration = (arr) => {
-        const vowelRegex = /[aeiou]/;
-        return arr.filter(word => !vowelRegex.test(word));
-    }
-    
-    const input = ['car', 'boy', 'spy', 'building', 'why', 'dry'];
-    console.log(vowelsFiltration(input)); 
-}    
+    return arr.filter(words=>{
+        return!['a', 'e', 'i', 'o', 'u'].some(vowels=>words.includes(vowels))
+    })
+}
     // write your code here
 
 // -------------------------------------------------------------------------------------------------------
