@@ -70,8 +70,8 @@ const LastWord_2 = (str) => {
 
 const replaceWords = (str) => {
     // write your code here
-    let languages = ["I", "am", "was"];
-    languages.splice(1, 1, "We");
+    let repchange = ["I", "am", "was"];
+    return repchange.splice(1, 1, "We");
 }
 // -------------------------------------------------------------------------------------------------------
 
