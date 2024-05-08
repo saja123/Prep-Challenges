@@ -14,23 +14,22 @@
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
 
-const recursionPattern = (int1, int2) => {
-    const generatePattern = (num, iterations, result = []) => {
-        result.push(num);
-        if (iterations === 0) {
-            return result;
-        }
-        if (num <= 1) {
-            return generatePattern(num + 5, iterations - 1, result);
-        }
-        return generatePattern(num - 5, iterations - 1, result);
-    }
-    
-    console.log(generatePattern(16, 5)); 
-    console.log(generatePattern(50, 9)); 
-    
+
+const recursionPattern = (int1, int2, direction = -1, result = []) => {
     // write your code here
-}
+    result.push(int1);
+
+    if (int1 < 0 && direction === -1) {
+        direction = 1;
+    }
+
+    if (int1 !== result[0] || direction === -1) {
+        recursionPattern(int1 + int2 * direction, int2, direction, result);
+    }
+
+    return result;
+} 
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -50,19 +49,11 @@ const recursionPattern = (int1, int2) => {
 const filterLinks = (str) => {
     // write your code here
     
-        const rex = /href="([^"]*\.com|[^"]*\.org|[^"]*\.net)"/;
-        const match = str.match(rex);
-        if (match) {
-            return match[1];
-        } else {
-            return null;
-        }
-    }
-    
-    
-    console.log(filterLinks('<a href="http://www.hackerrank.com"><h1><b>HackerRank</b></h1></a>')); 
-    console.log(filterLinks('<a href="http://www.something.org"><h1><b>HackerRank</b></h1></a>')); 
-    
+    let findW = str.indexOf('w');
+    let last = str.lastIndexOf('"');
+    let aTag = str.slice(findW, last);
+    return aTag;
+} 
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -81,17 +72,11 @@ const filterLinks = (str) => {
 //
 
 const isPalindrome = (str) => {
-    
-        
-        const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-        
-        return cleanedStr === cleanedStr.split('').reverse().join('');
-    }
-    
-   
-    console.log(isPalindrome("A man, a plan, a canal: Panama")); // Output: true
-    
     // write your code here
+    const Str1 = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const Str2 = Str1.split('').reverse().join('');
+    return Str1 === Str2;
+}
 
 // -------------------------------------------------------------------------------------------------------
 
