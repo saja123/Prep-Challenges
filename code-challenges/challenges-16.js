@@ -13,13 +13,20 @@
 // Output => "olleH";
 
 const reverseString = (string) => {
-    
-        return string.split("").reverse().join("");
+
+    const reverse = string.split("");
+    for (let i = 0; i < reverse.length / 2; i++) {
+        const Arr2 = reverse[i];
+        reverse[i] = reverse[reverse.length - 1 - i];
+        reverse[reverse.length - 1 - i] = Arr2
     }
-    
-    console.log(reverseString("Hello")); 
-    
-    //write your code here ...
+    return reverse.join("")
+
+}
+
+
+
+//write your code here ...
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -35,14 +42,13 @@ const reverseString = (string) => {
 // Input <= ["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"] , Output => ["hello ^_^ ","Hi ^_^" ] ;
 
 const detectFace = (arr) => {
-    
-        return arr.filter(str =>
-             str.includes("^_^"));
-    }
-    
-    console.log(detectFace(["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"])); 
-    
-    //write your code here ...
+
+    return arr.filter(str =>
+        str.includes("^_^"))
+}
+
+
+//write your code here ...
 
 // -------------------------------------------------------------------------------------------------------
 

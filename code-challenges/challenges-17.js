@@ -14,21 +14,21 @@
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
 
-
-const recursionPattern = (int1, int2, direction = -1, result = []) => {
-  // write your code here
-  result.push(int1);
-
-  if (int1 < 0 && direction === -1) {
-    direction = 1;
-  }
-
-  if (int1 !== result[0] || direction === -1) {
-    recursionPattern(int1 + int2 * direction, int2, direction, result);
-  }
-
-  return result;
-}
+const recursionPattern = (int1, int2) => {
+    // write your code here
+    let result = [];
+    const generatePattern = (num) => {
+      if (num < 0) {
+        result.push(num);
+        return;
+      }
+      result.push(num);
+      generatePattern(num - int2);
+      result.push(num);
+    };
+    generatePattern(int1);
+    return result;
+} 
 
 // -------------------------------------------------------------------------------------------------------
 
