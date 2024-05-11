@@ -16,11 +16,12 @@
 
 const wordLength = (str) => {
     
-        let words = str.split(" "); //using the split() method, calculates the index of the middle word, retrieves the middle word, and returns its length
-        let middleIndex = Math.floor(words.length / 2);
-        let middleWord = words[middleIndex];
-        return middleWord.length;
-    }
+    const words = str.split(' ');
+    const middleIndex = Math.floor(words.length / 2);
+    const middleWord = words[middleIndex];
+    
+    return middleWord.length;
+    };
     
     
    
@@ -51,12 +52,25 @@ const wordLength = (str) => {
 
 const wordLetters = (str1, str2) => {
     
-     const sortedStr1 = str1.split("").sort().join("");// This function sorts the characters of each input string alphabetically and then compares if the sorted strings are equal. If they are, it returns true; otherwise, it returns false
-     const sortedStr2 = str2.split("").sort().join("");
+    if (str1.length !== str2.length) {
+        return false;
+      }
     
-       
-     return sortedStr1 === sortedStr2;
- };
+      let freq = new Array(26).fill(0);
+    
+      for (let i = 0; i < str1.length; i++) {
+        freq[str1.charCodeAt(i)-97]++;
+        freq[str2.charCodeAt(i)-97]--;
+      }
+    
+      for (let x of freq) {
+        if (x !== 0) {
+          return false;
+        }
+      }
+    
+      return true;
+    }
   
 
 

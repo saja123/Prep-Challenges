@@ -17,17 +17,18 @@
 
 const recursionPattern = (int1, int2, direction = -1, result = []) => {
     // write your code here
-    result.push(int1);
-
-    if (int1 < 0 && direction === -1) {
-        direction = 1;
-    }
-
-    if (int1 !== result[0] || direction === -1) {
-        recursionPattern(int1 + int2 * direction, int2, direction, result);
-    }
-
-    return result;
+    let myArr = [];
+    const generatePattern = (num) => {
+      if (num < 0) {
+        myArr.push(num);
+        return;
+      }
+      myArr.push(num);
+      generatePattern(num - int2);
+      myArr.push(num);
+    };
+    generatePattern(int1);
+    return myArr;
 } 
 
 // -------------------------------------------------------------------------------------------------------
@@ -49,10 +50,16 @@ const recursionPattern = (int1, int2, direction = -1, result = []) => {
 const filterLinks = (str) => {
     // write your code here
     
-    let findW = str.indexOf('w');
-    let last = str.lastIndexOf('"');
-    let aTag = str.slice(findW, last);
-    return aTag;
+    const hrefIndex = str.indexOf('"');
+    if (hrefIndex !== -1) {
+      const startQuoteIndex = hrefIndex+8
+      const endQuoteIndex = str.lastIndexOf('"');
+      if (endQuoteIndex !== -1) {
+        const link = str.substring(startQuoteIndex, endQuoteIndex);
+        return link;
+      }
+    }
+    return null;
 } 
 
 // -------------------------------------------------------------------------------------------------------
@@ -73,9 +80,16 @@ const filterLinks = (str) => {
 
 const isPalindrome = (str) => {
     // write your code here
-    const Str1 = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const Str2 = Str1.split('').reverse().join('');
-    return Str1 === Str2;
+    str =str.toLowerCase()
+    str =str.replace(/[^0-9a-z]/gi, '')
+ let reversed=str.split("")
+ for(let i =0;i<reversed.length/2;i++){
+     let swap=reversed[i]
+     reversed[i]=reversed[reversed.length-1-i]
+     reversed[reversed.length-1-i]=swap   
+ }
+ reversed =reversed.join("")
+ return str==reversed;
 }
 
 // -------------------------------------------------------------------------------------------------------
