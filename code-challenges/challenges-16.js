@@ -14,10 +14,16 @@
 
 const reverseString = (string) => {
     
-        return string.split("").reverse().join("");
+    const reArr=string.split("")
+    for (let i =0 ;i<reArrArr.length/2;i++) {
+        const Arr2 = reArrArr[i];
+        reArrArr[i] = reArrArr[reArrArr.length - 1 - i];
+        reArrArr[reArrArr.length - 1 - i] = Arr2;        }
+        return reArrArr.join("")
+        
     }
     
-    console.log(reverseString("Hello")); 
+     
     
     //write your code here ...
 
@@ -36,11 +42,10 @@ const reverseString = (string) => {
 
 const detectFace = (arr) => {
     
-        return arr.filter(str =>
-             str.includes("^_^"));
+    return arr.filter(str =>
+        str.includes("^_^"))
     }
-    
-    console.log(detectFace(["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"])); 
+     
     
     //write your code here ...
 
