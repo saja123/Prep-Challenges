@@ -47,13 +47,19 @@ const recursionPattern = (int1, int2) => {
 // 
 
 const filterLinks = (str) => {
-    // write your code here
-    
-    let findW = str.indexOf('w');
-    let last = str.lastIndexOf('"');
-    let aTag = str.slice(findW, last);
-    return aTag;
-} 
+  // write your code here
+
+  const hrefIndex = str.indexOf('"');
+  if (hrefIndex !== -1) {
+    const startQuoteIndex = hrefIndex + 8
+    const endQuoteIndex = str.lastIndexOf('"');
+    if (endQuoteIndex !== -1) {
+      const link = str.substring(startQuoteIndex, endQuoteIndex);
+      return link;
+    }
+  }
+  return null;
+}
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -72,10 +78,17 @@ const filterLinks = (str) => {
 //
 
 const isPalindrome = (str) => {
-    // write your code here
-    const Str1 = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const Str2 = Str1.split('').reverse().join('');
-    return Str1 === Str2;
+  // write your code here
+  str = str.toLowerCase()
+  str = str.replace(/[^0-9a-z]/gi, '')
+  let reversed = str.split("")
+  for (let i = 0; i < reversed.length / 2; i++) {
+    let swap = reversed[i]
+    reversed[i] = reversed[reversed.length - 1 - i]
+    reversed[reversed.length - 1 - i] = swap
+  }
+  reversed = reversed.join("")
+  return str == reversed;
 }
 
 // -------------------------------------------------------------------------------------------------------
@@ -100,7 +113,7 @@ const isPalindrome = (str) => {
 //
 
 const samePattern = (str, arr) => {
-    // write your code here
+  // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
